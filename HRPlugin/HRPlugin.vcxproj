@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{90675839-bc7e-49ab-b96d-bd2a8b368fb9}</ProjectGuid>
+    <RootNamespace>HRPlugin</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)\bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\build\$(Platform)\$(Configuration)\</IntDir>
+    <TargetExt>.dp64</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)\bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\build\$(Platform)\$(Configuration)\</IntDir>
+    <TargetExt>.dp64</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)\bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\build\$(Platform)\$(Configuration)\</IntDir>
+    <TargetExt>.dp32</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)\bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\build\$(Platform)\$(Configuration)\</IntDir>
+    <TargetExt>.dp32</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)thirdparty\luajit\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)thirdparty\luajit\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>buildvm_x86.lib;lua51_x86.lib;luajit_x86.lib;minilua_x86.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)thirdparty\luajit\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)thirdparty\luajit\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>buildvm_x86.lib;lua51_x86.lib;luajit_x86.lib;minilua_x86.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)thirdparty\luajit\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)thirdparty\luajit\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>buildvm.lib;lua51.lib;luajit.lib;minilua.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)thirdparty\luajit\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)thirdparty\luajit\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>buildvm.lib;lua51.lib;luajit.lib;minilua.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="lua\LuaAPI.cpp" />
+    <ClCompile Include="lua\LuaEngine.cpp" />
+    <ClCompile Include="lua\LuaUtils.cpp" />
+    <ClCompile Include="plugin.cpp" />
+    <ClCompile Include="pluginmain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="lua\LuaAPI.h" />
+    <ClInclude Include="lua\LuaEngine.h" />
+    <ClInclude Include="lua\LuaUtils.h" />
+    <ClInclude Include="plugin.h" />
+    <ClInclude Include="pluginmain.h" />
+    <ClInclude Include="pluginsdk\bridgegraph.h" />
+    <ClInclude Include="pluginsdk\bridgelist.h" />
+    <ClInclude Include="pluginsdk\bridgemain.h" />
+    <ClInclude Include="pluginsdk\capstone\arm.h" />
+    <ClInclude Include="pluginsdk\capstone\arm64.h" />
+    <ClInclude Include="pluginsdk\capstone\capstone.h" />
+    <ClInclude Include="pluginsdk\capstone\m68k.h" />
+    <ClInclude Include="pluginsdk\capstone\mips.h" />
+    <ClInclude Include="pluginsdk\capstone\platform.h" />
+    <ClInclude Include="pluginsdk\capstone\ppc.h" />
+    <ClInclude Include="pluginsdk\capstone\sparc.h" />
+    <ClInclude Include="pluginsdk\capstone\systemz.h" />
+    <ClInclude Include="pluginsdk\capstone\x86.h" />
+    <ClInclude Include="pluginsdk\capstone\xcore.h" />
+    <ClInclude Include="pluginsdk\dbghelp\dbghelp.h" />
+    <ClInclude Include="pluginsdk\DeviceNameResolver\DeviceNameResolver.h" />
+    <ClInclude Include="pluginsdk\jansson\jansson.h" />
+    <ClInclude Include="pluginsdk\jansson\jansson_config.h" />
+    <ClInclude Include="pluginsdk\jansson\jansson_x64dbg.h" />
+    <ClInclude Include="pluginsdk\lz4\lz4.h" />
+    <ClInclude Include="pluginsdk\lz4\lz4file.h" />
+    <ClInclude Include="pluginsdk\lz4\lz4hc.h" />
+    <ClInclude Include="pluginsdk\TitanEngine\TitanEngine.h" />
+    <ClInclude Include="pluginsdk\XEDParse\XEDParse.h" />
+    <ClInclude Include="pluginsdk\yara\yara.h" />
+    <ClInclude Include="pluginsdk\yara\yara\ahocorasick.h" />
+    <ClInclude Include="pluginsdk\yara\yara\arena.h" />
+    <ClInclude Include="pluginsdk\yara\yara\atoms.h" />
+    <ClInclude Include="pluginsdk\yara\yara\compiler.h" />
+    <ClInclude Include="pluginsdk\yara\yara\elf.h" />
+    <ClInclude Include="pluginsdk\yara\yara\error.h" />
+    <ClInclude Include="pluginsdk\yara\yara\exec.h" />
+    <ClInclude Include="pluginsdk\yara\yara\exefiles.h" />
+    <ClInclude Include="pluginsdk\yara\yara\filemap.h" />
+    <ClInclude Include="pluginsdk\yara\yara\globals.h" />
+    <ClInclude Include="pluginsdk\yara\yara\hash.h" />
+    <ClInclude Include="pluginsdk\yara\yara\hex_lexer.h" />
+    <ClInclude Include="pluginsdk\yara\yara\integers.h" />
+    <ClInclude Include="pluginsdk\yara\yara\lexer.h" />
+    <ClInclude Include="pluginsdk\yara\yara\libyara.h" />
+    <ClInclude Include="pluginsdk\yara\yara\limits.h" />
+    <ClInclude Include="pluginsdk\yara\yara\mem.h" />
+    <ClInclude Include="pluginsdk\yara\yara\modules.h" />
+    <ClInclude Include="pluginsdk\yara\yara\object.h" />
+    <ClInclude Include="pluginsdk\yara\yara\parser.h" />
+    <ClInclude Include="pluginsdk\yara\yara\pe.h" />
+    <ClInclude Include="pluginsdk\yara\yara\proc.h" />
+    <ClInclude Include="pluginsdk\yara\yara\re.h" />
+    <ClInclude Include="pluginsdk\yara\yara\re_lexer.h" />
+    <ClInclude Include="pluginsdk\yara\yara\rules.h" />
+    <ClInclude Include="pluginsdk\yara\yara\scan.h" />
+    <ClInclude Include="pluginsdk\yara\yara\sizedstr.h" />
+    <ClInclude Include="pluginsdk\yara\yara\stream.h" />
+    <ClInclude Include="pluginsdk\yara\yara\strutils.h" />
+    <ClInclude Include="pluginsdk\yara\yara\threading.h" />
+    <ClInclude Include="pluginsdk\yara\yara\types.h" />
+    <ClInclude Include="pluginsdk\yara\yara\utils.h" />
+    <ClInclude Include="pluginsdk\_dbgfunctions.h" />
+    <ClInclude Include="pluginsdk\_plugins.h" />
+    <ClInclude Include="pluginsdk\_plugin_types.h" />
+    <ClInclude Include="pluginsdk\_scriptapi.h" />
+    <ClInclude Include="pluginsdk\_scriptapi_argument.h" />
+    <ClInclude Include="pluginsdk\_scriptapi_assembler.h" />
+    <ClInclude Include="pluginsdk\_scriptapi_bookmark.h" />
+    <ClInclude Include="pluginsdk\_scriptapi_comment.h" />
+    <ClInclude Include="pluginsdk\_scriptapi_debug.h" />
+    <ClInclude Include="pluginsdk\_scriptapi_flag.h" />
+    <ClInclude Include="pluginsdk\_scriptapi_function.h" />
+    <ClInclude Include="pluginsdk\_scriptapi_gui.h" />
+    <ClInclude Include="pluginsdk\_scriptapi_label.h" />
+    <ClInclude Include="pluginsdk\_scriptapi_memory.h" />
+    <ClInclude Include="pluginsdk\_scriptapi_misc.h" />
+    <ClInclude Include="pluginsdk\_scriptapi_module.h" />
+    <ClInclude Include="pluginsdk\_scriptapi_pattern.h" />
+    <ClInclude Include="pluginsdk\_scriptapi_register.h" />
+    <ClInclude Include="pluginsdk\_scriptapi_stack.h" />
+    <ClInclude Include="pluginsdk\_scriptapi_symbol.h" />
+    <ClInclude Include="sol\config.hpp" />
+    <ClInclude Include="sol\forward.hpp" />
+    <ClInclude Include="sol\sol.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="pluginsdk\capstone\capstone_x64.lib" />
+    <Library Include="pluginsdk\capstone\capstone_x86.lib" />
+    <Library Include="pluginsdk\dbghelp\dbghelp_x64.a" />
+    <Library Include="pluginsdk\dbghelp\dbghelp_x64.lib" />
+    <Library Include="pluginsdk\dbghelp\dbghelp_x86.a" />
+    <Library Include="pluginsdk\dbghelp\dbghelp_x86.lib" />
+    <Library Include="pluginsdk\DeviceNameResolver\DeviceNameResolver_x64.a" />
+    <Library Include="pluginsdk\DeviceNameResolver\DeviceNameResolver_x64.lib" />
+    <Library Include="pluginsdk\DeviceNameResolver\DeviceNameResolver_x86.a" />
+    <Library Include="pluginsdk\DeviceNameResolver\DeviceNameResolver_x86.lib" />
+    <Library Include="pluginsdk\jansson\jansson_x64.a" />
+    <Library Include="pluginsdk\jansson\jansson_x64.lib" />
+    <Library Include="pluginsdk\jansson\jansson_x86.a" />
+    <Library Include="pluginsdk\jansson\jansson_x86.lib" />
+    <Library Include="pluginsdk\lz4\lz4_x64.a" />
+    <Library Include="pluginsdk\lz4\lz4_x64.lib" />
+    <Library Include="pluginsdk\lz4\lz4_x86.a" />
+    <Library Include="pluginsdk\lz4\lz4_x86.lib" />
+    <Library Include="pluginsdk\TitanEngine\TitanEngine_x64.a" />
+    <Library Include="pluginsdk\TitanEngine\TitanEngine_x64.lib" />
+    <Library Include="pluginsdk\TitanEngine\TitanEngine_x86.a" />
+    <Library Include="pluginsdk\TitanEngine\TitanEngine_x86.lib" />
+    <Library Include="pluginsdk\x32bridge.lib" />
+    <Library Include="pluginsdk\x32dbg.lib" />
+    <Library Include="pluginsdk\x64bridge.lib" />
+    <Library Include="pluginsdk\x64dbg.lib" />
+    <Library Include="pluginsdk\yara\yara_x64.lib" />
+    <Library Include="pluginsdk\yara\yara_x86.lib" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

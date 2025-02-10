@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="plugin.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="pluginmain.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\LuaEngine.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\LuaUtils.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\LuaAPI.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="plugin.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginmain.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\capstone\arm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\capstone\arm64.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\capstone\capstone.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\capstone\m68k.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\capstone\mips.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\capstone\platform.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\capstone\ppc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\capstone\sparc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\capstone\systemz.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\capstone\x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\capstone\xcore.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\dbghelp\dbghelp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\DeviceNameResolver\DeviceNameResolver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\jansson\jansson.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\jansson\jansson_config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\lz4\lz4.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\lz4\lz4file.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\lz4\lz4hc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\TitanEngine\TitanEngine.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\XEDParse\XEDParse.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\yara\yara\ahocorasick.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\yara\yara\arena.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\yara\yara\atoms.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\yara\yara\compiler.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\yara\yara\elf.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\yara\yara\error.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\yara\yara\exec.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\yara\yara\exefiles.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\yara\yara\filemap.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\yara\yara\globals.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\yara\yara\hash.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\yara\yara\hex_lexer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\yara\yara\integers.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\yara\yara\lexer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\yara\yara\libyara.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\yara\yara\limits.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\yara\yara\mem.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\yara\yara\modules.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\yara\yara\object.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\yara\yara\parser.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\yara\yara\pe.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\yara\yara\proc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\yara\yara\re.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\yara\yara\re_lexer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\yara\yara\rules.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\yara\yara\scan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\yara\yara\sizedstr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\yara\yara\stream.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\yara\yara\strutils.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\yara\yara\threading.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\yara\yara\types.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\yara\yara\utils.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\yara\yara.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\_dbgfunctions.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\_plugin_types.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\_plugins.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\_scriptapi.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\_scriptapi_argument.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\_scriptapi_assembler.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\_scriptapi_bookmark.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\_scriptapi_comment.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\_scriptapi_debug.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\_scriptapi_flag.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\_scriptapi_function.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\_scriptapi_gui.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\_scriptapi_label.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\_scriptapi_memory.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\_scriptapi_misc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\_scriptapi_module.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\_scriptapi_pattern.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\_scriptapi_register.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\_scriptapi_stack.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\_scriptapi_symbol.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\bridgegraph.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\bridgelist.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\bridgemain.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pluginsdk\jansson\jansson_x64dbg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="sol\config.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="sol\forward.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="sol\sol.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\LuaEngine.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\LuaUtils.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\LuaAPI.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="pluginsdk\x32bridge.lib" />
+    <Library Include="pluginsdk\x32dbg.lib" />
+    <Library Include="pluginsdk\x64bridge.lib" />
+    <Library Include="pluginsdk\x64dbg.lib" />
+    <Library Include="pluginsdk\yara\yara_x64.lib" />
+    <Library Include="pluginsdk\yara\yara_x86.lib" />
+    <Library Include="pluginsdk\TitanEngine\TitanEngine_x64.a" />
+    <Library Include="pluginsdk\TitanEngine\TitanEngine_x64.lib" />
+    <Library Include="pluginsdk\TitanEngine\TitanEngine_x86.a" />
+    <Library Include="pluginsdk\TitanEngine\TitanEngine_x86.lib" />
+    <Library Include="pluginsdk\lz4\lz4_x64.a" />
+    <Library Include="pluginsdk\lz4\lz4_x64.lib" />
+    <Library Include="pluginsdk\lz4\lz4_x86.a" />
+    <Library Include="pluginsdk\lz4\lz4_x86.lib" />
+    <Library Include="pluginsdk\jansson\jansson_x64.a" />
+    <Library Include="pluginsdk\jansson\jansson_x64.lib" />
+    <Library Include="pluginsdk\jansson\jansson_x86.a" />
+    <Library Include="pluginsdk\jansson\jansson_x86.lib" />
+    <Library Include="pluginsdk\DeviceNameResolver\DeviceNameResolver_x64.a" />
+    <Library Include="pluginsdk\DeviceNameResolver\DeviceNameResolver_x64.lib" />
+    <Library Include="pluginsdk\DeviceNameResolver\DeviceNameResolver_x86.a" />
+    <Library Include="pluginsdk\DeviceNameResolver\DeviceNameResolver_x86.lib" />
+    <Library Include="pluginsdk\dbghelp\dbghelp_x64.a" />
+    <Library Include="pluginsdk\dbghelp\dbghelp_x64.lib" />
+    <Library Include="pluginsdk\dbghelp\dbghelp_x86.a" />
+    <Library Include="pluginsdk\dbghelp\dbghelp_x86.lib" />
+    <Library Include="pluginsdk\capstone\capstone_x64.lib" />
+    <Library Include="pluginsdk\capstone\capstone_x86.lib" />
+  </ItemGroup>
+</Project>
