@@ -238,26 +238,39 @@ ModuleInfo_t LuaAPI::Module::InfoFromName(sol::this_state state, const char* szN
 	return info;
 }
 
-sol::table LuaAPI::Module::GetList(sol::this_state state)
+int LuaAPI::Module::GetCountOfModules(sol::this_state state)
 {
+	ListInfo info;
+	if (!Script::Module::GetList(&info))
+	{
+		return 0;
+	}
 
+	return info.count;
+}
+
+sol::object LuaAPI::Module::GetModuleInfoByIndex(sol::this_state state, int nIdx)
+{
 	ListInfo info;
 	if (!Script::Module::GetList(&info))
 	{
 		return sol::nil;
 	}
 
-	sol::table tlbInfos = g_LuaState.create_table(state);
-
-	int nIndex = 0;
-	for (int i = 0; i < info.count; i++)
+	if (nIdx == 0)
 	{
-		Script::Module::ModuleInfo* pModInfo = (Script::Module::ModuleInfo*)info.data;
-		//TODO Fix crash
-		tlbInfos[++nIndex] = sol::make_object(state, ModuleInfo_t(pModInfo[i].base, pModInfo[i].size, pModInfo[i].entry, pModInfo[i].sectionCount, pModInfo[i].name, pModInfo[i].path));
+		return sol::nil;
 	}
 
-	return tlbInfos;
+	int nLuaIndex = nIdx - 1;
+	if (nLuaIndex >= info.count)
+	{
+		return sol::nil;
+	}
+
+	Script::Module::ModuleInfo* pModInfo = (Script::Module::ModuleInfo*)info.data;
+
+	return sol::make_object(state, ModuleInfo_t(pModInfo[nLuaIndex].base, pModInfo[nLuaIndex].size, pModInfo[nLuaIndex].entry, pModInfo[nLuaIndex].sectionCount, pModInfo[nLuaIndex].name, pModInfo[nLuaIndex].path));
 }
 
 duint LuaAPI::Module::GetMainModuleBase(sol::this_state state)
@@ -307,7 +320,7 @@ int LuaAPI::Module::GetMainModuleSectionCount(sol::this_state state)
 	return Script::Module::GetMainModuleSectionCount();
 }
 
-sol::table LuaAPI::Module::GetMainModuleSectionList(sol::this_state state)
+sol::object LuaAPI::Module::GetMainModuleSectionInfoByIndex(sol::this_state state, int nIndex)
 {
 	ListInfo info;
 	if (!Script::Module::GetMainModuleSectionList(&info))
@@ -315,17 +328,17 @@ sol::table LuaAPI::Module::GetMainModuleSectionList(sol::this_state state)
 		return sol::nil;
 	}
 
-	sol::table tlbInfos = g_LuaState.create_table(state);
-
-	int nIndex = 0;
-	for (int i = 0; i < info.count; i++)
+	if (nIndex == 0)
 	{
-		Script::Module::ModuleSectionInfo* pModInfo = (Script::Module::ModuleSectionInfo*)info.data;
-		//TODO Fix crash
-		tlbInfos[++nIndex] = sol::make_object(state, ModuleSectionInfo_t(pModInfo[i].addr, pModInfo[i].size, pModInfo[i].name));
+		return sol::nil;
 	}
 
-	return tlbInfos;
+	int nLuaIndex = nIndex - 1;
+
+	
+	Script::Module::ModuleSectionInfo* pModInfo = (Script::Module::ModuleSectionInfo*)info.data;
+
+	return sol::make_object(state, ModuleSectionInfo_t(pModInfo[nLuaIndex].addr, pModInfo[nLuaIndex].size, pModInfo[nLuaIndex].name));
 }
 
 duint LuaAPI::Pattern::FindMem(sol::this_state state, duint uStart, duint size, const char* pattern)

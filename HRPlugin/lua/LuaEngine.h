@@ -116,7 +116,8 @@ public:
 			"entry_from_name", LuaAPI::Module::EntryFromName,
 			"info_from_addr", LuaAPI::Module::InfoFromAddr,
 			"info_from_name", LuaAPI::Module::InfoFromName,
-			"get_list", LuaAPI::Module::GetList,
+			"get_count_of_modules", LuaAPI::Module::GetCountOfModules,
+			"get_module_info_by_index", LuaAPI::Module::GetModuleInfoByIndex,
 			"get_main_module_base", LuaAPI::Module::GetMainModuleBase,
 			"get_main_module_size", LuaAPI::Module::GetMainModuleSize,
 			"get_main_module_entry", LuaAPI::Module::GetMainModuleEntry,
@@ -124,7 +125,7 @@ public:
 			"get_main_module_name", LuaAPI::Module::GetMainModuleName,
 			"get_main_module_path", LuaAPI::Module::GetMainModulePath,
 			"get_main_module_section_count", LuaAPI::Module::GetMainModuleSectionCount,
-			"get_main_module_section_list", LuaAPI::Module::GetMainModuleSectionList
+			"get_main_module_section_list", LuaAPI::Module::GetMainModuleSectionInfoByIndex
 		);
 
 		g_LuaState.create_named_table(

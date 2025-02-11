@@ -162,7 +162,8 @@ namespace LuaAPI
 
 		ModuleInfo_t InfoFromName(sol::this_state state, const char* szName);
 
-		sol::table GetList(sol::this_state state);
+		int GetCountOfModules(sol::this_state state);
+		sol::object GetModuleInfoByIndex(sol::this_state state, int nIdx);
 
 		duint GetMainModuleBase(sol::this_state state);
 
@@ -177,8 +178,7 @@ namespace LuaAPI
 		std::string GetMainModulePath(sol::this_state state);
 
 		int GetMainModuleSectionCount(sol::this_state state);
-
-		sol::table GetMainModuleSectionList(sol::this_state state);
+		sol::object GetMainModuleSectionInfoByIndex(sol::this_state state, int nIndex);
 
 	}
 
